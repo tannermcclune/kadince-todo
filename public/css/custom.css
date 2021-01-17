@@ -89,3 +89,8 @@ a:hover{
     display: inline;
     text-decoration: none;
 }
+
+i.fas.fa-times {
+    float: right;
+    font-size: 16px;
+}

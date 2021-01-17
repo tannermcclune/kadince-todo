@@ -2,7 +2,7 @@
 <div class="row mt-5">
     <div class="col-md-6 m-auto">
       <div class="card card-body card-new">
-        <h3 class="text-center mb-3">Update Task</h3>
+        <h3 class="text-center mb-3">Update Task <a href="/"><i class="fas fa-times"></i></a></h3>
         <br>
         <form action="/dashboard/task/<%= task._id %>/update" method="POST">
 
@@ -33,28 +33,40 @@
           </div>
 
           <% if (task.timeComplete == 'Low') { %>
-          <div class="form-group">
-            <label for="timeComplete">Priority:</label>
-
-            <select id="timeComplete" name="timeComplete" class="form-control">
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-            </select>
-          </div>
-          <% } %>
-
-          <% if (task.timeComplete == 'Medium') { %>
             <div class="form-group">
               <label for="timeComplete">Priority:</label>
   
               <select id="timeComplete" name="timeComplete" class="form-control">
-                  <option value="Medium">Medium</option>
                   <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
                   <option value="High">High</option>
               </select>
             </div>
             <% } %>
+  
+            <% if (task.timeComplete == 'Medium') { %>
+              <div class="form-group">
+                <label for="timeComplete">Priority:</label>
+    
+                <select id="timeComplete" name="timeComplete" class="form-control">
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                    <option value="High">High</option>
+                </select>
+              </div>
+              <% } %>
+  
+              <% if (task.timeComplete == 'High') { %>
+                  <div class="form-group">
+                    <label for="timeComplete">Priority:</label>
+        
+                    <select id="timeComplete" name="timeComplete" class="form-control">
+                        <option value="High">High</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                    </select>
+                  </div>
+              <% } %>
 
             <% if (task.actionType == 'Pending') { %>
             <input type="text" hidden value="Pending" id="actionType" name="actionType">
