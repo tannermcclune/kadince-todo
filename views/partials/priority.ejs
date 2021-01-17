@@ -1,0 +1,17 @@
+<% if (task.timeComplete == 'Low') { %>
+    <span class="status bg-low">
+        <%= task.timeComplete %>
+    </span>
+    <% } %>
+
+    <% if (task.timeComplete == 'Medium') { %>
+    <span class="status bg-med">
+        <%= task.timeComplete %>
+    </span>
+    <% } %>
+
+    <% if (task.timeComplete == 'High') { %>
+    <span class="status bg-high">
+        <%= task.timeComplete %>
+    </span>
+    <% } %>

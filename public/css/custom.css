@@ -1,0 +1,91 @@
+body{
+    background-color: #f3f3f3 !important;
+}
+
+.bg-light{
+    background-color: #ffffff !important;
+    box-shadow:
+        0 8.6px 4.6px rgba(0, 0, 0, 0.01),
+        0 69px 37px rgba(0, 0, 0, 0.02);
+}
+
+.wrapper{
+    background-color: #ffffff;
+    box-shadow:
+        0 4.5px 4.5px -100px rgba(0, 0, 0, 0.01),
+        0 12.5px 12.4px -100px rgba(0, 0, 0, 0.015),
+        0 30.1px 29.8px -100px rgba(0, 0, 0, 0.02),
+        0 100px 99px -100px rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+    border: 1px #e2e2e2 solid;
+}
+
+.top-tasks{
+    padding: 20px 35px;
+    border-bottom: 1px #e2e2e2 solid;
+}
+
+.body-tasks{
+    padding: 25px 35px;
+}
+
+.row{
+    padding: 10px 0px;
+
+}
+
+.hover:hover{
+    background-color: #f8f8f8;
+}
+
+.move-rt{
+    padding-left: 15px;
+}
+
+.pull-right{
+    text-align: right;
+}
+
+.status{
+    padding: 2px 20px;
+    border-radius: 25px;
+}
+
+.bg-low{
+    background-color: #09A9ED;
+    color: #ffffff;
+}
+
+.bg-med{
+    background-color: #FF9B00;
+    color: #ffffff;
+}
+
+.bg-high{
+    background-color: #FF5A5F;
+    color: #ffffff;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.far.fa-check-circle{
+    color: #bdbdbd;
+    padding-right: 10px;
+}
+
+.fas.fa-check-circle{
+    color: #A3D116;
+    padding-right: 10px;
+    text-decoration: none;
+}
+
+.check:hover .far.fa-check-circle,
+.check .fas.fa-check-circle {
+    display: none;
+}
+.check:hover .fas.fa-check-circle {
+    display: inline;
+    text-decoration: none;
+}

@@ -1,0 +1,22 @@
+<h5>Completed Tasks</h5>
+    <% tasks.forEach((task) => { %>
+        <% if (task.actionType == 'Complete') { %>
+            <div class="row hover">
+                <div class="col-md-7">
+                    <a href="/dashboard/task/<%= task._id %>/pending" data-toggle="tooltip" title="Set Task to Pending">
+                        <i class="fas fa-check-circle"></i>
+                    </a>
+
+                    <a href="/dashboard/task/<%= task._id %>">
+                        <%= task.taskName %>
+                    </a>
+                </div>
+                <div class="col-md pull-right">
+                    <% include ./priority %>
+                </div>
+                <div class="col-md-2 pull-right"> 
+                    <%= dateFormat(task.dueDate, "mmm dS, yyyy") %>     
+                </div>
+            </div>
+        <% } %>
+    <% }) %>
