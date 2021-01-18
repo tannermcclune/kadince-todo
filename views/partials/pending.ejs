@@ -15,9 +15,8 @@
                             <% include ./priority %>
                         </div>
                         <div class="col-md-2 pull-right"> 
-                            <%= dateFormat(task.dueDate, "mmm dS, yyyy") %>     
-                        </div>
-                    
+                            <% include ./date %>
+                        </div>          
             </div>
         <% } %>
     <% }) %>

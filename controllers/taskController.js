@@ -27,7 +27,6 @@ module.exports = {
         });
 
         Task.create(newTask);
-        console.log(newTask);
         res.redirect('/');
     },
 
@@ -72,7 +71,6 @@ module.exports = {
         try {
             let task = await Task.findById(id);
             res.locals.task = task;
-            console.log(task);
             res.render('tasks/single-task')
         } catch (error) {
             res.redirect('/');

@@ -48,8 +48,10 @@ app.use(function(req, res, next) {
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.error = req.flash('error');
+  // Used for calendar picker
+  res.locals.todayDate = new Date().toISOString().slice(0,10);
+  // Used for setting the user of the app
   res.locals.currentUser = req.user;
-  console.log(`User logged in: ${req.user}`);
   next();
 });
 
